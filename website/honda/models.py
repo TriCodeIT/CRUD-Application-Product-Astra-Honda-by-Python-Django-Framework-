@@ -12,7 +12,7 @@ class Product(models.Model):
     product = models.CharField(max_length=50)
     genre = models.CharField(max_length=25, choices=genre_choices, default='Pop')
     color = models.CharField(max_length=50)
-    rating = models.PositiveIntegerField(default=1)
+    price = models.PositiveIntegerField(default=1)
 
     def __unicode__(self):
         return self.product
