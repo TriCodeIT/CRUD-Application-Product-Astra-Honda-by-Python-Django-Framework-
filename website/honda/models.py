@@ -5,7 +5,7 @@ from django.db import models
 class Product(models.Model):
     genre_choices = (
         ('Matic', 'Matic'),
-        ('Bebek', 'Bebek'),
+        ('Cub', 'Cub'),
         ('Sport', 'Sport'),
         ('BigBike', 'BigBike'),
     )
