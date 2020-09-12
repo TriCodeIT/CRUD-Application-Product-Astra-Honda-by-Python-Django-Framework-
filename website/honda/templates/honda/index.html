@@ -35,7 +35,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Product</th>
+                        <th scope="col">Race</th>
                         <th scope="col">Genre</th>
                         <th scope="col">Color</th>
                         <th scope="col">Price</th>
@@ -46,25 +46,23 @@
                     {% for product in products %}
                     <tr>
                         <td>{{ product.id }}</td>
-                        <td>{{ product.product }}</td>
+                        <td>{{ product.race }}</td>
                         <td>{{ product.genre }}</td>
                         <td>{{ product.color }}</td>
                         <td>{{ product.price }}</td>
                         <td>
                             <a class="btn btn-sm btn-outline-primary" href="edit/{{ product.id }}">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
-                            </a>
-                            <a class="btn btn-sm btn-outline-danger" onclick="sendData({{ product.id }})"
-                                data-toggle="modal" data-target="#exampleModalCenter">
+                              </a>
+                              <a class="btn btn-sm btn-outline-danger" onclick="sendData({{ product.id }})" data-toggle="modal" data-target="#exampleModalCenter">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Delete
-                            </a>
+                              </a>
                         </td>
                     </tr>
                     {% endfor %}
                     {% if not products %}
                     <tr>
-                        <td colspan="6" class="cs-text-center cs-empty-table"> There is no product yet. Please add a
-                            product !
+                        <td colspan="6" class="cs-text-center cs-empty-table"> There is no product yet. Please add a product !
                         </td>
                     </tr>
                     {% endif %}

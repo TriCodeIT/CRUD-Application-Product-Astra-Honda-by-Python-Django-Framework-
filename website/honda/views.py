@@ -19,17 +19,17 @@ def index(request):
 def edit(request, pk):
     product = get_object_or_404(Product, pk=pk)
     status = 'success'
-    titleValue = Product.objects.filter(pk=pk).values('title')[0];
-    product_title = titleValue['title']
+    raceValue = Product.objects.filter(pk=pk).values('race')[0];
+    product_race = raceValue['race']
     
     if request.method == 'POST':
         post_form = ProductForm(request.POST, instance=product)
         if post_form.is_valid():
             post_form.save()
-            return render(request, 'honda/edit.html', {'form': post_form, 'status': status, 'product_title': product_title })
+            return render(request, 'honda/edit.html', {'form': post_form, 'status': status, 'product_race': product_race })
     else:
         form = ProductForm(instance=product)
-        return render(request, 'honda/edit.html', {'form': form, 'product_title': product_title })
+        return render(request, 'honda/edit.html', {'form': form, 'product_race': product_race })
 
 def delete(request, pk):
     product = Product.objects.get(pk=pk)
