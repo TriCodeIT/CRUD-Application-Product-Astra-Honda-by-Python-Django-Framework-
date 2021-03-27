@@ -1,6 +1,6 @@
 # CRUD-Application-Product-Astra-Honda-by-Python-Django-Framework-
 
-Framework/ Library, the following are
+Framework/ Library
 
 1) Django 1.8
 2) SQLite 3
@@ -8,6 +8,19 @@ Framework/ Library, the following are
 4) jQuery 3.3.1
 5) Font Awesome 4.7.0
 6) Django Widget Tweaks 1.4.1
+
+# Menjalankan Aplikasi
+
+1. Buatlah sebuah virtual environment pada root directory $ virtualenv env.
+
+2. Aktifkan virtual environment $ source env/bin/activate 
+
+3. Install seluruh dependency pip install -r requirements.txt
+
+4. Migrasikan aplikasi (env) $ python website/manage.py migrate 
+
+5. Jalankan aplikasi (env) $ python website/manage.py runserver
+
 
 ![index-honda](https://user-images.githubusercontent.com/67305098/92997952-317a4f00-f541-11ea-8847-22bfb70d6a82.jpg)
 
